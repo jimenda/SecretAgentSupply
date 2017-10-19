@@ -1,0 +1,34 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: Helvetica;
+}
+
+/*Header Content*/
+
+#header {
+  display: flex;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 960px;
+}
+
+.header-content h2 {
+  padding-top: 0.66rem;
+  padding-bottom: 0.66rem;
+  font-size: 1rem;
+}
+.header-content img {
+  height: 1.5rem;
+  padding: 0.4rem 1rem 0.4rem 0.5rem;
+}
+
+/*Banner Content*/
