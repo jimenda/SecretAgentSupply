@@ -19,6 +19,7 @@ body {
   display: flex;
   align-items: center;
   width: 960px;
+  padding-left: 5rem;
 }
 
 .header-content h2 {
@@ -32,3 +33,31 @@ body {
 }
 
 /*Banner Content*/
+
+.banner {
+  background-image: url("../images/moto.jpeg");
+  background-repeat: no-repeat;
+  height: 25rem;
+}
+
+.banner .headline {
+  background-color: black;
+  width: 20rem;
+  padding-left: 3rem;
+  margin-left: 5rem;
+  color: white;
+  z-index: 5;
+}
+
+.headline p {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-bottom: 0.25rem
+}
+
+.headline h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
