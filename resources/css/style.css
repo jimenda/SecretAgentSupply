@@ -1,9 +1,11 @@
 html {
   font-size: 18px;
+  background-color: black;
 }
 
 body {
   font-family: Helvetica;
+  width: 960px;
 }
 
 /*Header Content*/
@@ -18,7 +20,6 @@ body {
 .header-content {
   display: flex;
   align-items: center;
-  width: 960px;
   padding-left: 5rem;
 }
 
@@ -60,4 +61,20 @@ body {
   font-size: 2rem;
   font-weight: bold;
   padding-bottom: 2rem;
+}
+
+/*Naviation*/
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: firebrick;
+}
+
+.nav a {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
