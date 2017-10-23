@@ -5,7 +5,6 @@ html {
 
 body {
   font-family: Helvetica;
-  width: 960px;
   background-color: white;
 }
 
@@ -43,16 +42,17 @@ div {
 .banner {
   background-image: url("../images/moto.jpeg");
   background-repeat: no-repeat;
-  height: 25rem;
+  background-position: center;
+  background-size: cover;
+  height: 25em;
 }
 
 .banner .headline {
   background-color: black;
   width: 20rem;
-  padding-left: 3rem;
   margin-left: 5rem;
   color: white;
-  padding: 2em 3em;
+  padding: 2rem 3rem;
   position: relative;
   top: 9em;
 }
@@ -73,17 +73,26 @@ div {
 /*Navigation*/
 
 .nav {
-  display: flex;
-  justify-content: space-around;
   background-color: firebrick;
+  padding: 0.75rem 0;
 }
 
-.nav a {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nav-items a {
   color: white;
   font-weight: bold;
   text-decoration: none;
+}
+
+.nav-mobile {
+  display: none;
 }
 
 /*Main Content*/
@@ -105,8 +114,8 @@ div {
 
 .item-image {
   border: 4px solid black;
-  padding: 2em 0;
-  height: 9em;
+  padding: 2rem 0;
+  height: 9rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -121,7 +130,7 @@ div {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
 .logistics {
@@ -139,7 +148,6 @@ div {
 .location h3, .hours h3 {
   background-color: black;
   color: white;
-  font-weight: bold;
   padding: 1rem 0 1rem 2rem;
   margin-bottom: 0.25rem;
 }
@@ -147,12 +155,128 @@ div {
 /*Footer*/
 
 #footer {
-  display: flex;
-  align-content: center;
+  position: relative;
+  top: 9rem;
+  background-color: black;
   color: white;
   height: 5rem;
 }
 
 #footer p {
   width: 75%;
+}
+
+/*Screen Sizes*/
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .main {
+    margin: 0;
+  }
+
+  .banner .headline {
+    margin-left: 0;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .nav-mobile a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .items {
+    justify-content: space-between;
+  }
+
+  .item {
+    width: 47%;
+  }
+
+  .item.glasses {
+    display: none;
+  }
+
+  .logistics {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  html {
+    font-size: 16px;
+  }
+
+  .banner {
+      height: 15rem;
+  }
+
+  .banner .headline {
+    width: 100%;
+    position: relative;
+    top: 10rem;
+    padding: 0 0 0 0.5rem;
+  }
+
+  .headline p {
+    padding-top: 1rem;
+    font-size: 0.77rem;
+    font-weight: bold;
+  }
+
+  .headline h2 {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .item {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .item.watch {
+    display: none;
+  }
+
+  .logistics {
+    display: block;
+    text-align: left;
+  }
+
+  .location, .hours {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .location h3, .hours h3 {
+    margin-bottom: 0.25rem;
+  }
+
+  .location p, .hours p {
+    margin-bottom: 1rem;
+  }
+
+  #footer {
+    text-align: center;
+    top: 9rem;
+    height: 6rem;
+  }
+
+  #footer p {
+    width: 100%;
+  }
 }
